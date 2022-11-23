@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUALIZADOR</title>
+    <link rel="icon" href="./src/img/logo.png" type="image/png">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./src/css/myStyle.css">
+    
+    <!-- Data GUI -->
+    <script src="./src/libs/DAT.GUI.min.js"></script>
+
+    <!-- With this line of code we can have the basic code of THREEJS-->
+    <script src="./src/libs/build/three.min.js"></script>
+
+    <!-- Controls -->
+    <script src="./src/libs/controls/three.js"></script>
+    <script src="./src/vendors/vendors/three.js-master/build/three.min.js"></script>
+
+    <!-- Load (MTL, OBJ)-->
+    <script src="./src/libs/load/OBJLoader.js"></script>
+    <script src="./src/libs/load/MTLLoader.js"></script>
+    <script src="./src/libs/controls/OrbitControls.js"></script>
+    <!-- With this import of js file, We can apply the elements of THREEJS-->
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/Sound.js"></script>
+</head>
+
+<body onload="start()">
+    <canvas class="webgl"></canvas>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
+       <div id = "ima-logo">
+        <img src="src/img/logo.png">
+       </div>
+
+       <div id="button-poligonos">
+         <button>CONTAR POLIGONOS</button>
+         
+      </div>
+      <div><button onclick="playAudio()" type="button">musica</button>
+    </div>
+      <audio id="myAudio">
+        <source src="songs/Tranz.mp3" type="audio/mpeg">
+    </audio>
+    
+    
+    
+    
+    <script>
+        var x = document.getElementById("myAudio");
+    
+        function playAudio() {
+            x.play();
+            
+        }
+       
+    </script>
+</body>
+</html>

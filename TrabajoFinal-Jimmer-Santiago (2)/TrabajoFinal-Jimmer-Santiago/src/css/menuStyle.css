@@ -1,0 +1,242 @@
+.content{
+    background-color:#BFFDA9;
+}
+
+#game-area{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+    font-weight: 700;
+}
+
+#main-header {
+    color: #21e50b;
+    font-size: 100px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(-100%);
+  }
+  
+#sub-header {
+    color: #29e907;
+    font-size: 62px;
+}
+
+#play-area {
+    margin: 20px auto;
+  }
+  
+  #input-area {
+    width: 200px;
+    margin: 0 auto;
+    border: 2px solid #63c6cf;
+    border-radius: 30px;
+    background: rgb(10, 217, 41);
+    padding: 2px;
+  }
+  
+  #nickname-input {
+    border: 0;
+    padding: 10px 10px;
+    width: 150px;
+    margin-left: 15px;
+    text-align: center;
+    color: #999;
+    font-size: 20px;
+    outline: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  
+  #button-area {
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid #00b158;
+    background: #00CC66;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(700%);
+  }
+  
+  #button-area:hover {
+    background: #00b158;
+  }
+
+  #play-button {
+    background: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    width: 150px;
+    padding: 10px 10px;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  
+  #tip-area {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #game-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  body{
+    background: #303030;
+  }
+  .contenedor {
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+  }
+  
+  .cubo, .cubo .cara, .cubo .cara-fondo {
+    height: 290px;
+    width: 290px;
+  }
+  
+  .cubo {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-transform: rotateX(0deg) rotateY(-30deg);
+    transform: rotateX( 0deg ) rotateY( -30deg );
+    margin: 150px auto;
+  
+    -webkit-animation: giro 20s infinite linear;
+    animation: giro 20s infinite linear;
+  }
+  
+  .cubo .cara {
+    position: absolute;
+    border: 5px solid #000;
+    border-radius: 25px;
+  }
+  
+  .cubo .cara img {
+    border-radius: 25px;
+  }
+  
+  .cubo .cara-fondo{
+    background: #000;
+    position: absolute;
+    border: 5px solid #000;
+    border-radius: 19px;
+  
+  }
+  
+  /*Cara frontal*/
+  .cubo .cara:nth-child(1) {
+    -webkit-transform: translateZ(150px);
+    transform: translateZ(150px);
+  }
+  /*Cara posterior*/
+  .cubo .cara:nth-child(2) {
+    -webkit-transform: rotateY(180deg) translateZ(150px);
+    transform: rotateY(180deg) translateZ(150px);
+  }
+  /*Cara izquierda*/
+  .cubo .cara:nth-child(3) {
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+    transform: rotateY(-90deg) translateZ(150px);
+  }
+  /*Cara derecha*/
+  .cubo .cara:nth-child(4) {
+    -webkit-transform: rotateY(90deg) translateZ(150px);
+    transform: rotateY(90deg) translateZ(150px);
+  }
+  /*Cara superior*/
+  .cubo .cara:nth-child(5) {
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+    transform: rotateX(90deg) translateZ(150px);
+  }
+  /*Cara inferior*/
+  .cubo .cara:nth-child(6) {
+    -webkit-transform: rotateX(-90deg) translateZ(150px);
+    transform: rotateX(-90deg) translateZ(150px);
+  }
+  
+  
+  /************Caras posteriores*************/
+  /*Cara frontal*/
+  .cubo .cara-fondo:nth-child(7) {
+    -webkit-transform: translateZ(149px);
+    transform: translateZ(149px);
+  }
+  /*Cara posterior*/
+  .cubo .cara-fondo:nth-child(8) {
+    -webkit-transform: rotateY(180deg) translateZ(149px);
+    transform: rotateY(180deg) translateZ(149px);
+  }
+  /*Cara izquierda*/
+  .cubo .cara-fondo:nth-child(9) {
+    -webkit-transform: rotateY(-90deg) translateZ(149px);
+    transform: rotateY(-90deg) translateZ(149px);
+  }
+  /*Cara derecha*/
+  .cubo .cara-fondo:nth-child(10) {
+    -webkit-transform: rotateY(90deg) translateZ(149px);
+    transform: rotateY(90deg) translateZ(149px);
+  }
+  /*Cara superior*/
+  .cubo .cara-fondo:nth-child(11) {
+    -webkit-transform: rotateX(90deg) translateZ(149px);
+    transform: rotateX(90deg) translateZ(149px);
+  }
+  /*Cara inferior*/
+  .cubo .cara-fondo:nth-child(12) {
+    -webkit-transform: rotateX(-90deg) translateZ(149px);
+    transform: rotateX(-90deg) translateZ(149px);
+  }
+  
+  /*Caras interiores para formar una cruz en el centro*/
+  .cubo .cara-fondo:nth-child(13) {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+  
+  .cubo .cara-fondo:nth-child(14) {
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+  
+  .cubo .cara-fondo:nth-child(15) {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  
+  @-webkit-keyframes giro {
+      0% { -webkit-transform: rotateX(-45deg) rotateY(0deg); }
+      50% { -webkit-transform: rotateX(45deg) rotateY(360deg); }
+      100% { -webkit-transform: rotateX(-45deg) rotateY(720deg); }
+  }
+  
+  @keyframes giro {
+      0% { transform: rotateX(-45deg) rotateY(0deg); }
+      50% { transform: rotateX(45deg) rotateY(360deg); }
+      100% { transform: rotateX(-45deg) rotateY(720deg); }
+  }
+  
+  @-webkit-keyframes giro360 {
+      0% { -webkit-transform: rotateX(  0deg) rotateY(  0deg); }
+    100% { -webkit-transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+  @keyframes giro360 {
+      0% { transform: rotateX(  0deg) rotateY(  0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  

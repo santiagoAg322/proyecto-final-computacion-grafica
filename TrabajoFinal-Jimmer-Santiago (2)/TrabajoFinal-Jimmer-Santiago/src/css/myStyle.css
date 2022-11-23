@@ -1,0 +1,38 @@
+body { 
+    margin: 0; 
+}
+
+.webgl{
+    width: 100%;
+    height: 100%;
+}
+
+#ima-logo{
+    left: 1000%;
+    top: 50%;
+}
+
+#button-poligonos{
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid #00b158;
+    background: #00CC66;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(-300%);
+}
+
+#avatar{
+    color: #28e50b;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-30%)translateY(-500%);
+}
